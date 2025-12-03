@@ -51,7 +51,6 @@ const AddMedicinePage = () => {
             type="text"
             placeholder="Medicine Name(Monas)"
             className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40"
-            defaultValue="Paracetamol 500mg"
             required
           />
         </div>
@@ -66,7 +65,6 @@ const AddMedicinePage = () => {
             type="text"
             placeholder="Medicine Group(Montilucast)"
             className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40"
-            defaultValue="Analgesic"
             required
           />
         </div>
@@ -81,7 +79,6 @@ const AddMedicinePage = () => {
             type="number"
             placeholder="Per Piece"
             className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40"
-            defaultValue="0.50"
             required
           />
         </div>
@@ -96,7 +93,6 @@ const AddMedicinePage = () => {
             rows={4}
             className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40 resize-none"
             placeholder="Type here"
-            defaultValue="Paracetamol is a common analgesic and antipyretic used to treat fever and mild to moderate pain. It works by inhibiting the synthesis of prostaglandins in the brain."
           ></textarea>
         </div>
 
@@ -110,7 +106,6 @@ const AddMedicinePage = () => {
             rows={4}
             className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40 resize-none"
             placeholder="Type here"
-            defaultValue="Common side effects include nausea, stomach pain, and loss of appetite. Rare but serious side effects include skin rash, liver damage, and allergic reactions."
           ></textarea>
         </div>
 
