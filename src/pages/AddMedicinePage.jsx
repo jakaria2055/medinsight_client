@@ -1,9 +1,128 @@
-import React from 'react'
-
 const AddMedicinePage = () => {
   return (
-    <div>AddMedicinePage</div>
-  )
-}
+    <div className="py-10 flex flex-col items-center bg-white">
+      <form className="md:p-10 p-4 space-y-5 max-w-lg">
+        {/* Image */}
+        <div>
+          <p className="text-base font-medium">Medicine Image</p>
+          <label
+            htmlFor="fileInput"
+            className="border-2 bg-white rounded-md text-sm w-80 h-40 border-indigo-600/60 p-8 flex flex-col items-center gap-4 cursor-pointer hover:border-indigo-500 transition"
+          >
+            <svg
+              width="44"
+              height="44"
+              viewBox="0 0 44 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M25.665 3.667H11a3.667 3.667 0 0 0-3.667 3.666v29.334A3.667 3.667 0 0 0 11 40.333h22a3.667 3.667 0 0 0 3.666-3.666v-22m-11-11 11 11m-11-11v11h11m-7.333 9.166H14.665m14.667 7.334H14.665M18.332 16.5h-3.667"
+                stroke="#2563EB"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <p className="text-gray-500">Drag & drop your image here</p>
+            <p className="text-gray-400">
+              Or <span className="text-indigo-500 underline">click</span> to
+              upload
+            </p>
+            <input
+              id="fileInput"
+              type="file"
+              accept="image/*"
+              className="hidden"
+            />
+          </label>
+          <p className="text-sm text-gray-600 mt-2">
+            Selected: paracetamol-image.jpg
+          </p>
+        </div>
 
-export default AddMedicinePage
+        {/* Medicine Name */}
+        <div className="flex flex-col gap-1 max-w-md">
+          <label className="text-base font-medium" htmlFor="product-name">
+            Medicine Name
+          </label>
+          <input
+            id="product-name"
+            type="text"
+            placeholder="Medicine Name(Monas)"
+            className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40"
+            defaultValue="Paracetamol 500mg"
+            required
+          />
+        </div>
+
+        {/* Medicine Group*/}
+        <div className="flex flex-col gap-1 max-w-md">
+          <label className="text-base font-medium" htmlFor="product-group">
+            Medicine Group
+          </label>
+          <input
+            id="product-group"
+            type="text"
+            placeholder="Medicine Group(Montilucast)"
+            className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40"
+            defaultValue="Analgesic"
+            required
+          />
+        </div>
+
+        {/* Medicine Price*/}
+        <div className="flex flex-col gap-1 max-w-md">
+          <label className="text-base font-medium" htmlFor="product-price">
+            Current Medicine Price
+          </label>
+          <input
+            id="product-price"
+            type="number"
+            placeholder="Per Piece"
+            className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40"
+            defaultValue="0.50"
+            required
+          />
+        </div>
+
+        {/* Medicine Effective */}
+        <div className="flex flex-col gap-1 max-w-md">
+          <label className="text-base font-medium" htmlFor="product-effect">
+            Medicine Pharmacology
+          </label>
+          <textarea
+            id="product-effect"
+            rows={4}
+            className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40 resize-none"
+            placeholder="Type here"
+            defaultValue="Paracetamol is a common analgesic and antipyretic used to treat fever and mild to moderate pain. It works by inhibiting the synthesis of prostaglandins in the brain."
+          ></textarea>
+        </div>
+
+        {/* Medicine SideEffect */}
+        <div className="flex flex-col gap-1 max-w-md">
+          <label className="text-base font-medium" htmlFor="product-sideeffect">
+            Side Effects
+          </label>
+          <textarea
+            id="product-sideeffect"
+            rows={4}
+            className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40 resize-none"
+            placeholder="Type here"
+            defaultValue="Common side effects include nausea, stomach pain, and loss of appetite. Rare but serious side effects include skin rash, liver damage, and allergic reactions."
+          ></textarea>
+        </div>
+
+        <button
+          type="button"
+          className="w-sm px-8 py-2.5 bg-indigo-500 text-white font-medium rounded hover:bg-indigo-600 transition"
+        >
+          ADD
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default AddMedicinePage;
