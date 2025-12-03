@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
+import NavBar from "./components/NavBar";
+import HomePage from "./pages/HomePage";
+import { Route, Routes } from "react-router-dom";
+
+
+
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+     
+          </Routes>
+    </>
+  );
+};
 
-export default App
+export default App;
