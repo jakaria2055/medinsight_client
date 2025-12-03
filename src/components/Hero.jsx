@@ -1,4 +1,5 @@
 import React from "react";
+import mediImage from "../image/medi.png";
 
 const Hero = () => {
   return (
@@ -48,7 +49,7 @@ const Hero = () => {
           <div className="absolute inset-0 z-[-1] rounded-lg bg-gradient-to-r from-[#661FFF] via-[#FF1994] to-[#2D73FF] blur-2xl opacity-50"></div>
           <img
             className="max-w-md w-full max-h-[560px] rounded-[40px] max-md:px-3 md:mr-10"
-            src="/image/medi.png"
+            src={mediImage}
             alt="Startup team"
           />
         </div>
