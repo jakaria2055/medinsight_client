@@ -1,5 +1,5 @@
 import { AiOutlineMail } from "react-icons/ai";
-import { FaImage, FaLocationArrow } from "react-icons/fa6";
+import { FaImage, FaLocationArrow, FaRegEye } from "react-icons/fa6";
 import { MdOutlineDriveFileRenameOutline } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 
@@ -43,6 +43,7 @@ const AdminSignUpPage = () => {
                   placeholder="password"
                   defaultValue="••••••••"
                 />
+                <FaRegEye />
               </div>
             </div>
 
