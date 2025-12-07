@@ -1,8 +1,12 @@
 import React from 'react'
+import Hero from '../components/Hero'
+import { Image } from 'lucide-react'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>
+      <Hero /> 
+    </div>
   )
 }
 

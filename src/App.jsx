@@ -1,3 +1,4 @@
+
 import { Toaster } from "react-hot-toast";
 import NavBar from "./components/NavBar";
 import { Route, Routes } from "react-router-dom";
@@ -11,6 +12,7 @@ import SearchedMedicinePage from "./pages/SearchedMedicinePage";
 import SearchedMedicineDetailsPage from "./pages/SearchedMedicineDetailsPage";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
+
 
 const App = () => {
   return (
