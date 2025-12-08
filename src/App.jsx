@@ -1,7 +1,8 @@
-
+import React from "react";
 import { Toaster } from "react-hot-toast";
 import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
+import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import AdminDashBoard from "./pages/AdminDashBoard";
 import AdminSignUpPage from "./pages/AdminSignUpPage";
@@ -11,9 +12,6 @@ import MedicineDetailsPage from "./pages/MedicineDetailsPage";
 import UpdateMedicine from "./pages/UpdateMedicine";
 import SearchedMedicinePage from "./pages/SearchedMedicinePage";
 import SearchedMedicineDetailsPage from "./pages/SearchedMedicineDetailsPage";
-import Footer from "./components/Footer";
-import HomePage from "./pages/HomePage";
-
 
 const App = () => {
   return (
@@ -22,8 +20,8 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-     
-          </Routes>
+     </Routes>
+      <Footer />
     </>
   );
 };
