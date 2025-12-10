@@ -13,4 +13,11 @@ const AdminSignUpPage = () => {
             <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-gray-800">
               Admin Sign Up
             </h2>
+</div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
+export default AdminSignUpPage;
