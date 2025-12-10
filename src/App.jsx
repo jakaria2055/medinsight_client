@@ -20,6 +20,7 @@ const App = () => {
       <NavBar />
       <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/admin/dashboard" element={<AdminDashBoard />} />
      </Routes>
       <Footer />
     </>
