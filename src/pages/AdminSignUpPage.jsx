@@ -1,11 +1,8 @@
-import { AiOutlineMail } from "react-icons/ai";
-import { FaImage, FaLocationArrow, FaRegEye } from "react-icons/fa6";
-import { MdOutlineDriveFileRenameOutline } from "react-icons/md";
-import { RiLockPasswordLine } from "react-icons/ri";
+import React from "react";
 
 const AdminSignUpPage = () => {
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 to-indigo-50 py-8 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-indigo-50 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
         {/* FORM */}
         <div className="w-full max-w-md">
@@ -20,7 +17,7 @@ const AdminSignUpPage = () => {
                 Company Email
               </label>
               <div className="flex items-center border bg-indigo-50/50 border-gray-200 hover:border-indigo-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 rounded-lg gap-3 px-3 transition-all duration-200">
-                <AiOutlineMail className="text-blue-800" />
+                <img src="/icon/email.svg" alt="Email icon" />
                 <input
                   className="w-full outline-none bg-transparent py-3 text-gray-800 placeholder-gray-400"
                   type="email"
@@ -36,14 +33,13 @@ const AdminSignUpPage = () => {
                 Password
               </label>
               <div className="flex items-center border bg-indigo-50/50 border-gray-200 hover:border-indigo-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 rounded-lg gap-3 px-3 transition-all duration-200">
-                <RiLockPasswordLine className="text-blue-800" />
+                <img src="/icon/password.svg" alt="Password icon" />
                 <input
                   className="w-full outline-none bg-transparent py-3 text-gray-800 placeholder-gray-400"
                   type="password"
                   placeholder="password"
                   defaultValue="••••••••"
                 />
-                <FaRegEye />
               </div>
             </div>
 
@@ -53,7 +49,7 @@ const AdminSignUpPage = () => {
                 Company Name
               </label>
               <div className="flex items-center border bg-indigo-50/50 border-gray-200 hover:border-indigo-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 rounded-lg gap-3 px-3 transition-all duration-200">
-                <MdOutlineDriveFileRenameOutline className="text-blue-800" />
+                <img src="/icon/name.svg" alt="Name icon" />
                 <input
                   className="w-full outline-none bg-transparent py-3 text-gray-800 placeholder-gray-400"
                   type="text"
@@ -69,7 +65,7 @@ const AdminSignUpPage = () => {
                 Company Image URL
               </label>
               <div className="flex items-center border bg-indigo-50/50 border-gray-200 hover:border-indigo-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 rounded-lg gap-3 px-3 transition-all duration-200">
-                <FaImage className="text-blue-800" />
+                <img src="/icon/image.svg" alt="Image icon" />
                 <input
                   className="w-full outline-none bg-transparent py-3 text-gray-800 placeholder-gray-400"
                   type="text"
@@ -85,7 +81,7 @@ const AdminSignUpPage = () => {
                 Company Location
               </label>
               <div className="flex items-center border bg-indigo-50/50 border-gray-200 hover:border-indigo-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 rounded-lg gap-3 px-3 transition-all duration-200">
-                <FaLocationArrow className="text-blue-800" />
+                <img src="/icon/location.svg" alt="Location icon" />
                 <input
                   className="w-full outline-none bg-transparent py-3 text-gray-800 placeholder-gray-400"
                   type="text"
@@ -101,6 +97,7 @@ const AdminSignUpPage = () => {
                 Company Description
               </label>
               <div className="flex items-center border bg-indigo-50/50 border-gray-200 hover:border-indigo-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 rounded-lg gap-3 px-3 transition-all duration-200">
+                <img src="/icon/textarea.svg" alt="Description icon" />
                 <textarea
                   rows={4}
                   className="w-full outline-none bg-transparent py-3 text-gray-800 placeholder-gray-400"
@@ -111,7 +108,7 @@ const AdminSignUpPage = () => {
             </div>
 
             {/* Submit Button */}
-            <button className="w-full mb-4 bg-linear-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 transition-all duration-200 active:scale-[0.98] py-3 rounded-lg text-white font-medium shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-100">
+            <button className="w-full mb-4 bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 transition-all duration-200 active:scale-[0.98] py-3 rounded-lg text-white font-medium shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-100">
               Submit
             </button>
           </div>
@@ -122,3 +119,4 @@ const AdminSignUpPage = () => {
 };
 
 export default AdminSignUpPage;
+
