@@ -41,7 +41,7 @@ const Hero = () => {
 
           <p className="text-xs mt-2 text-slate-600">
             Know Your Medicine. Secure Your Health.
-          </p>
+          </p> 
         </div>
 
         {/* Right Image Section */}
