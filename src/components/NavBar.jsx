@@ -1,14 +1,14 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between p-4 border-b border-white/25 w-full relative">
+    <nav className="flex items-center justify-between p-4 border-b border-white/25 w-full 
+                sticky top-0 z-50 backdrop-blur-md">
       {/* Logo */}
-      <h1 className="ml-5 text-2xl font-bold text-indigo-700">
-        MedInsight
-      </h1>
+      <h1 className="ml-5 text-2xl font-bold text-indigo-700">MedInsight</h1>
 
       {/* Menu Items */}
       <ul
@@ -17,9 +17,12 @@ const NavBar = () => {
           ${menuOpen ? "max-md:left-0" : "max-md:-left-full"}
         `}
       >
-        <li className="hover:text-slate-500 cursor-pointer">
+        <Link
+          to="/admin-dashboard"
+          className="hover:text-slate-500 cursor-pointer"
+        >
           Admin Dashboard
-        </li>
+        </Link>
 
         {/* Close Menu Button (Mobile) */}
         <button
@@ -50,9 +53,12 @@ const NavBar = () => {
 
       {/* Right Side Button */}
       <div>
-        <button className="max-md:hidden px-6 py-3 text-white bg-indigo-600 hover:bg-indigo-700 transition rounded-full">
+        <Link
+          to="/signin"
+          className="max-md:hidden px-6 py-3 text-white bg-indigo-600 hover:bg-indigo-700 transition rounded-full"
+        >
           Admin Login
-        </button>
+        </Link>
       </div>
     </nav>
   );
