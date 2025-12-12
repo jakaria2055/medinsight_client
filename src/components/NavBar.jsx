@@ -5,8 +5,7 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between p-4 border-b border-white/25 w-full 
-                sticky top-0 z-50 backdrop-blur-md">
+    <nav className="flex items-center justify-between p-4 border-b border-white/25 w-full relative">
       {/* Logo */}
       <h1 className="ml-5 text-2xl font-bold text-indigo-700">MedInsight</h1>
 
