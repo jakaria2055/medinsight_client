@@ -13,6 +13,21 @@ const AdminSignUpPage = () => {
             <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-gray-800">
               Admin Sign Up
             </h2>
+             {/* Email Field */}
+            <div className="mb-4">
+              <label className="block text-xs font-medium text-gray-700 mb-2 uppercase tracking-wide">
+                Company Email
+              </label>
+              <div className="flex items-center border bg-indigo-50/50 border-gray-200 hover:border-indigo-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 rounded-lg gap-3 px-3 transition-all duration-200">
+                <AiOutlineMail className="text-blue-800" />
+                <input
+                  className="w-full outline-none bg-transparent py-3 text-gray-800 placeholder-gray-400"
+                  type="email"
+                  placeholder="Company Email"
+                  defaultValue="company@example.com"
+                />
+              </div>
+            </div>
 </div>
         </div>
       </div>
