@@ -1,13 +1,32 @@
+import AdminTaskStore from "../store/AdminTaskStore";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+
 const AddMedicinePage = () => {
+  const navigate = useNavigate();
+  const { AddFormData, MedicineFormChange, AddMedicineRequest } =
+    AdminTaskStore();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let res = await AddMedicineRequest(AddFormData);
+    if (res) {
+      navigate("/admin-dashboard");
+      toast.success("Medicine Added Successfully.");
+    } else {
+      toast.error("Something went wrong");
+    }
+  };
+
   return (
     <div className="py-10 flex flex-col items-center bg-white">
-      <form className="md:p-10 p-4 space-y-5 max-w-lg">
+      <form onSubmit={handleSubmit} className="md:p-10 p-4 space-y-5 max-w-lg">
         {/* Image */}
         <div>
-          <p className="text-base font-medium">Medicine Image</p>
+          <p className="text-base font-medium">Product Image</p>
           <label
             htmlFor="fileInput"
-            className="border-2 bg-white rounded-md text-sm w-80 h-40 border-indigo-600/60 p-8 flex flex-col items-center gap-4 cursor-pointer hover:border-indigo-500 transition"
+            className="border bg-white rounded-md text-sm w-80 h-40 border-indigo-600/60 p-8 flex flex-col items-center gap-4  cursor-pointer hover:border-indigo-500 transition"
           >
             <svg
               width="44"
@@ -30,15 +49,18 @@ const AddMedicinePage = () => {
               upload
             </p>
             <input
+              onChange={(e) => MedicineFormChange("image", e.target.files[0])}
               id="fileInput"
               type="file"
               accept="image/*"
               className="hidden"
             />
           </label>
-          <p className="text-sm text-gray-600 mt-2">
-            Selected: paracetamol-image.jpg
-          </p>
+          {AddFormData.image && (
+            <p className="text-sm text-gray-600 mt-2">
+              Selected: {AddFormData.image.name}
+            </p>
+          )}
         </div>
 
         {/* Medicine Name */}
@@ -47,6 +69,8 @@ const AddMedicinePage = () => {
             Medicine Name
           </label>
           <input
+            value={AddFormData.name}
+            onChange={(e) => MedicineFormChange("name", e.target.value)}
             id="product-name"
             type="text"
             placeholder="Medicine Name(Monas)"
@@ -61,6 +85,8 @@ const AddMedicinePage = () => {
             Medicine Group
           </label>
           <input
+            value={AddFormData.group}
+            onChange={(e) => MedicineFormChange("group", e.target.value)}
             id="product-group"
             type="text"
             placeholder="Medicine Group(Montilucast)"
@@ -72,9 +98,11 @@ const AddMedicinePage = () => {
         {/* Medicine Price*/}
         <div className="flex flex-col gap-1 max-w-md">
           <label className="text-base font-medium" htmlFor="product-price">
-            Current Medicine Price
+            Current Price
           </label>
           <input
+            value={AddFormData.price}
+            onChange={(e) => MedicineFormChange("price", e.target.value)}
             id="product-price"
             type="number"
             placeholder="Per Piece"
@@ -89,6 +117,10 @@ const AddMedicinePage = () => {
             Medicine Pharmacology
           </label>
           <textarea
+            value={AddFormData.effectiveness}
+            onChange={(e) =>
+              MedicineFormChange("effectiveness", e.target.value)
+            }
             id="product-effect"
             rows={4}
             className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40 resize-none"
@@ -102,6 +134,8 @@ const AddMedicinePage = () => {
             Side Effects
           </label>
           <textarea
+            value={AddFormData.sideeffect}
+            onChange={(e) => MedicineFormChange("sideeffect", e.target.value)}
             id="product-sideeffect"
             rows={4}
             className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40 resize-none"
@@ -110,8 +144,8 @@ const AddMedicinePage = () => {
         </div>
 
         <button
-          type="button"
-          className="w-sm px-8 py-2.5 bg-indigo-500 text-white font-medium rounded hover:bg-indigo-600 transition"
+          type="submit"
+          className="px-8 py-2.5 bg-indigo-500 text-white font-medium rounded"
         >
           ADD
         </button>
