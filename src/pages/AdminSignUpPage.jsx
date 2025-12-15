@@ -59,6 +59,37 @@ const AdminSignUpPage = () => {
                 />
               </div>
             </div>
+ {/* Image Field */}
+            <div className="mb-6">
+              <label className="block text-xs font-medium text-gray-700 mb-2 uppercase tracking-wide">
+                Company Image URL
+              </label>
+              <div className="flex items-center border bg-indigo-50/50 border-gray-200 hover:border-indigo-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 rounded-lg gap-3 px-3 transition-all duration-200">
+                <FaImage className="text-blue-800" />
+                <input
+                  className="w-full outline-none bg-transparent py-3 text-gray-800 placeholder-gray-400"
+                  type="text"
+                  placeholder="Company Image URL"
+                  defaultValue="https://example.com/logo.png"
+                />
+              </div>
+            </div>
+
+            {/* Location Field */}
+            <div className="mb-6">
+              <label className="block text-xs font-medium text-gray-700 mb-2 uppercase tracking-wide">
+                Company Location
+              </label>
+              <div className="flex items-center border bg-indigo-50/50 border-gray-200 hover:border-indigo-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 rounded-lg gap-3 px-3 transition-all duration-200">
+                <FaLocationArrow className="text-blue-800" />
+                <input
+                  className="w-full outline-none bg-transparent py-3 text-gray-800 placeholder-gray-400"
+                  type="text"
+                  placeholder="Company Location"
+                  defaultValue="New York, USA"
+                />
+              </div>
+            </div>
 
 </div>
         </div>
