@@ -91,7 +91,27 @@ const AdminSignUpPage = () => {
               </div>
             </div>
 
-</div>
+
+  {/* Description Field */}
+            <div className="mb-6">
+              <label className="block text-xs font-medium text-gray-700 mb-2 uppercase tracking-wide">
+                Company Description
+              </label>
+              <div className="flex items-center border bg-indigo-50/50 border-gray-200 hover:border-indigo-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 rounded-lg gap-3 px-3 transition-all duration-200">
+                <textarea
+                  rows={4}
+                  className="w-full outline-none bg-transparent py-3 text-gray-800 placeholder-gray-400"
+                  placeholder="Enter a bio..."
+                  defaultValue="Leading pharmaceutical company focused on innovative healthcare solutions and patient wellness."
+                ></textarea>
+              </div>
+            </div>
+
+            {/* Submit Button */}
+            <button className="w-full mb-4 bg-linear-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 transition-all duration-200 active:scale-[0.98] py-3 rounded-lg text-white font-medium shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-100">
+              Submit
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -99,3 +119,4 @@ const AdminSignUpPage = () => {
 };
 
 export default AdminSignUpPage;
+
