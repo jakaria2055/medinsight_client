@@ -2,7 +2,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FaRegEye } from "react-icons/fa6";
 import { RiLockPasswordLine } from "react-icons/ri";
 
-const AdminSignUpPage = () => {
+const AdminSignInPage = () => {
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-50 to-indigo-50 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
@@ -60,4 +60,4 @@ const AdminSignUpPage = () => {
   );
 };
 
-export default AdminSignUpPage;
+export default AdminSignInPage;
