@@ -1,13 +1,17 @@
-import React from 'react'
-import Hero from '../components/Hero'
-import { Image } from 'lucide-react'
+import Hero from "../components/Hero";
+import CompanyMarque from "../components/CompanyMarque";
+import WarmSupportive from "../components/WarmSupportive";
+import FAQ from "../components/FAQ";
 
 const HomePage = () => {
   return (
     <div>
-      <Hero /> 
+      <Hero />
+      <CompanyMarque />
+      <WarmSupportive />
+      <FAQ />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

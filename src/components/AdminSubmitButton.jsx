@@ -1,9 +1,22 @@
-import React from 'react'
+import AdminStore from "../store/AdminStore";
 
-const AdminSubmitButton = () => {
-  return (
-    <div>AdminSubmitButton</div>
-  )
+function AdminSubmitButton(props) {
+  let { isFormSubmit } = AdminStore();
+
+  if (isFormSubmit === false) {
+    return (
+      <button onClick={props.onClick} type="button" className={props.className}>
+        {props.text}
+      </button>
+    );
+  } else {
+    return (
+      <button disabled={true} className={props.className}>
+        <div className="spinner-border spinner-border-sm" role="status"></div>{" "}
+        Processing
+      </button>
+    );
+  }
 }
 
-export default AdminSubmitButton
+export default AdminSubmitButton;
