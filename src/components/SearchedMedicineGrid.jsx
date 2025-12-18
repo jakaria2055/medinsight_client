@@ -56,7 +56,7 @@ const SearchedMedicineGrid = ({ medicineList, viewMode = "grid" }) => {
               {/* Featured Badge (for first item) */}
               {index === 0 && (
                 <div className="absolute top-3 right-3 z-10">
-                  <div className="px-2.5 py-1 bg-gradient-to-r from-amber-500 to-orange-600 text-white text-xs font-bold rounded-full flex items-center gap-1">
+                  <div className="px-2.5 py-1 bg-linear-to-r from-amber-500 to-orange-600 text-white text-xs font-bold rounded-full flex items-center gap-1">
                     <Star className="w-3 h-3" />
                     Featured
                   </div>
@@ -65,7 +65,7 @@ const SearchedMedicineGrid = ({ medicineList, viewMode = "grid" }) => {
 
               {/* Medicine Image */}
               <div className="relative pt-8 px-6 pb-4">
-                <div className="bg-gradient-to-br from-blue-50 to-gray-100 rounded-xl p-4">
+                <div className="bg-linear-to-br from-blue-50 to-gray-100 rounded-xl p-4">
                   <div className="aspect-square rounded-lg overflow-hidden bg-white">
                     <img
                       src={medicine.image}
@@ -117,7 +117,7 @@ const SearchedMedicineGrid = ({ medicineList, viewMode = "grid" }) => {
                     <div className="text-right">
                       <p className="text-sm text-gray-500 mb-1">Manufacturer</p>
                       <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 rounded-full bg-gradient-to-br from-indigo-100 to-purple-100 overflow-hidden border border-indigo-200">
+                        <div className="w-6 h-6 rounded-full bg-linear-to-br from-indigo-100 to-purple-100 overflow-hidden border border-indigo-200">
                           {medicine.company?.image ? (
                             <img
                               src={medicine.company.image}
@@ -130,7 +130,7 @@ const SearchedMedicineGrid = ({ medicineList, viewMode = "grid" }) => {
                             </div>
                           )}
                         </div>
-                        <span className="text-sm font-medium text-gray-700 truncate max-w-[80px]">
+                        <span className="text-sm font-medium text-gray-700 truncate max-w-20">
                           {medicine.company?.name || "Unknown"}
                         </span>
                       </div>
@@ -139,7 +139,7 @@ const SearchedMedicineGrid = ({ medicineList, viewMode = "grid" }) => {
 
                   {/* View Details Button */}
                   <div className="flex items-center justify-center">
-                    <button className="w-full py-2.5 bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 font-medium rounded-lg hover:from-blue-100 hover:to-blue-200 transition-all duration-200 flex items-center justify-center gap-2 group-hover:shadow-sm">
+                    <button className="w-full py-2.5 bg-linear-to-r from-blue-50 to-blue-100 text-blue-700 font-medium rounded-lg hover:from-blue-100 hover:to-blue-200 transition-all duration-200 flex items-center justify-center gap-2 group-hover:shadow-sm">
                       View Details
                       <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
@@ -157,7 +157,7 @@ const SearchedMedicineGrid = ({ medicineList, viewMode = "grid" }) => {
   return (
     <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
       {/* Table Header */}
-      <div className="bg-gradient-to-r from-blue-50 to-gray-50 px-6 py-4 border-b border-gray-200">
+      <div className="bg-linear-to-r from-blue-50 to-gray-50 px-6 py-4 border-b border-gray-200">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -230,7 +230,7 @@ const SearchedMedicineGrid = ({ medicineList, viewMode = "grid" }) => {
                     className="flex items-center gap-4 group/link"
                   >
                     <div className="relative">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-50 to-gray-100 border border-gray-200 overflow-hidden">
+                      <div className="w-14 h-14 rounded-xl bg-linear-to-br from-blue-50 to-gray-100 border border-gray-200 overflow-hidden">
                         {medicine.image ? (
                           <img
                             src={medicine.image}
@@ -290,7 +290,7 @@ const SearchedMedicineGrid = ({ medicineList, viewMode = "grid" }) => {
                 {/* Manufacturer Cell */}
                 <td className="py-4 px-6 hidden md:table-cell">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-100 to-purple-100 overflow-hidden border border-indigo-200">
+                    <div className="w-10 h-10 rounded-full bg-linear-to-br from-indigo-100 to-purple-100 overflow-hidden border border-indigo-200">
                       {medicine.company?.image ? (
                         <img
                           src={medicine.company.image}
@@ -322,7 +322,7 @@ const SearchedMedicineGrid = ({ medicineList, viewMode = "grid" }) => {
                 <td className="py-4 px-6">
                   <Link
                     to={`/searched-medicine-details/${medicine._id}`}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-lg hover:from-blue-700 hover:to-blue-800 hover:shadow-sm transition-all duration-200 group/btn"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-blue-600 to-blue-700 text-white font-medium rounded-lg hover:from-blue-700 hover:to-blue-800 hover:shadow-sm transition-all duration-200 group/btn"
                   >
                     <span>View</span>
                     <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />

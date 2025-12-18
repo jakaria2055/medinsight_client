@@ -25,7 +25,7 @@ export default function WarmSupportive() {
       icon: <Droplets className="w-6 h-6" />,
       image: "/image/warm_water.jpg",
       color: "from-blue-500 to-cyan-400",
-      bgColor: "bg-gradient-to-br from-blue-50 to-cyan-50",
+      bgColor: "bg-linear-to-br from-blue-50 to-cyan-50",
       borderColor: "border-blue-200",
       tips: [
         "Drink water upon waking",
@@ -44,7 +44,7 @@ export default function WarmSupportive() {
       icon: <Apple className="w-6 h-6" />,
       image: "/image/warm_food.jpg",
       color: "from-emerald-500 to-green-400",
-      bgColor: "bg-gradient-to-br from-emerald-50 to-green-50",
+      bgColor: "bg-linear-to-br from-emerald-50 to-green-50",
       borderColor: "border-emerald-200",
       tips: [
         "Eat colorful vegetables",
@@ -63,7 +63,7 @@ export default function WarmSupportive() {
       icon: <Activity className="w-6 h-6" />,
       image: "/image/warm_exercise.jpg",
       color: "from-orange-500 to-amber-400",
-      bgColor: "bg-gradient-to-br from-orange-50 to-amber-50",
+      bgColor: "bg-linear-to-br from-orange-50 to-amber-50",
       borderColor: "border-orange-200",
       tips: [
         "30 minutes daily",
@@ -82,7 +82,7 @@ export default function WarmSupportive() {
       icon: <Moon className="w-6 h-6" />,
       image: "/image/warm_sleep.jpg",
       color: "from-indigo-500 to-purple-400",
-      bgColor: "bg-gradient-to-br from-indigo-50 to-purple-50",
+      bgColor: "bg-linear-to-br from-indigo-50 to-purple-50",
       borderColor: "border-indigo-200",
       tips: [
         "Consistent sleep schedule",
@@ -101,7 +101,7 @@ export default function WarmSupportive() {
       icon: <Heart className="w-6 h-6" />,
       image: "/image/warm_relax.jpg",
       color: "from-rose-500 to-pink-400",
-      bgColor: "bg-gradient-to-br from-rose-50 to-pink-50",
+      bgColor: "bg-linear-to-br from-rose-50 to-pink-50",
       borderColor: "border-rose-200",
       tips: ["5-minute meditation", "Deep breathing exercises", "Nature walks"],
       stat: "10 Min/Day",
