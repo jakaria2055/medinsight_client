@@ -27,7 +27,7 @@ const NavBar = () => {
         <img
           className="w-full h-full object-cover border-2 border-blue-400 rounded-3xl"
           src="/image/medinsight_logo.png"
-          alt="MEDINFO Logo"
+          alt="medinsight logo"
         />
       </Link>
 

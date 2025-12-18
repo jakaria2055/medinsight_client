@@ -12,7 +12,7 @@ export default function Footer() {
       <footer className="flex flex-col items-center justify-around w-full py-16 text-sm bg-slate-50 text-gray-800/70">
         <img className="w-xl" src="/image/medinsight_logo.png" alt="" />
         <p className="mt-4 text-center">
-          Copyright © 2025 <a href="https://prebuiltui.com">MEDINFO</a>. All
+          Copyright © 2025 <a href="https://prebuiltui.com">MEDINSIGHT</a>. All
           rights reservered.
         </p>
         <div className="flex items-center gap-4 mt-6">

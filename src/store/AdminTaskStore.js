@@ -3,7 +3,7 @@ import axios from "axios";
 import { unauthorized } from "../utility/utility";
 
 // const BaseURL = "http://localhost:3000/api/v1";
-const BaseURL = "https://medinfo-server-seven.vercel.app/api/v1";
+const BaseURL = "https://medinsight-server.vercel.app/api/v1";
 
 const AdminTaskStore = create((set) => ({
   isAdmin: () => {
