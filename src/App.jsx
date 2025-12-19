@@ -11,6 +11,7 @@ import SearchedMedicinePage from "./pages/SearchedMedicinePage";
 import SearchedMedicineDetailsPage from "./pages/SearchedMedicineDetailsPage";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
+import FAQ from "./components/FAQ";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
           path="/searched-medicine-details/:id"
           element={<SearchedMedicineDetailsPage />}
         />
+        <Route path="/faq" element={<FAQ />} />
       </Routes>
       <Footer />
     </>

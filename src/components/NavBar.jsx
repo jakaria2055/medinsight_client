@@ -60,7 +60,7 @@ const NavBar = () => {
     { label: "Home", path: "/", icon: <Home className="w-4 h-4" /> },
     {
       label: "Medicine Search",
-      path: "/medicine-search",
+      path: "/",
       icon: <Search className="w-4 h-4" />,
     },
     { label: "FAQ", path: "/faq", icon: <Shield className="w-4 h-4" /> },

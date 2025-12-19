@@ -16,9 +16,10 @@ import {
 const SearchedMedicinePage = () => {
   const { KeywordProductList, ListByKeywordRequest } = UserStore();
   const { keyword } = useParams();
+
   const [loading, setLoading] = useState(true);
   const [viewMode, setViewMode] = useState("grid");
-  const [setFilteredProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
     (async () => {
@@ -32,7 +33,7 @@ const SearchedMedicinePage = () => {
     if (KeywordProductList) {
       setFilteredProducts(KeywordProductList);
     }
-  }, [KeywordProductList, setFilteredProducts]);
+  }, [KeywordProductList]);
 
   if (loading) {
     return (
@@ -55,7 +56,7 @@ const SearchedMedicinePage = () => {
     );
   }
 
-  if (!KeywordProductList || KeywordProductList.length === 0) {
+  if (!filteredProducts || filteredProducts.length === 0) {
     return (
       <main className="min-h-screen bg-linear-to-br from-gray-50 to-blue-50/30 py-8 px-4">
         <div className="max-w-7xl mx-auto">
@@ -174,7 +175,7 @@ const SearchedMedicinePage = () => {
                 <p className="text-gray-600">
                   Found{" "}
                   <span className="font-semibold text-blue-700">
-                    {KeywordProductList.length}
+                    {filteredProducts.length}
                   </span>{" "}
                   medicines
                 </p>
@@ -258,7 +259,7 @@ const SearchedMedicinePage = () => {
                 <button className="ml-1 hover:text-blue-900">×</button>
               </div>
               <div className="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm">
-                <span>Results: {KeywordProductList.length}</span>
+                <span>Results: {filteredProducts.length}</span>
               </div>
             </div>
           </div>
@@ -295,7 +296,7 @@ const SearchedMedicinePage = () => {
             {/* Medicine Grid */}
             <div className="p-6">
               <SearchedMedicineGrid
-                medicineList={KeywordProductList}
+                medicineList={filteredProducts}
                 viewMode={viewMode}
               />
             </div>
@@ -308,11 +309,11 @@ const SearchedMedicinePage = () => {
                   <span>
                     Displaying{" "}
                     <span className="font-semibold">
-                      {KeywordProductList.length}
+                      {filteredProducts.length}
                     </span>{" "}
                     of{" "}
                     <span className="font-semibold">
-                      {KeywordProductList.length}
+                      {filteredProducts.length}
                     </span>{" "}
                     results
                   </span>
