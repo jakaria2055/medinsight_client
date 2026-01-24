@@ -1,16 +1,36 @@
-# React + Vite
+# 🩺 MedInsight — Trusted Medicine Information Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MedInsight is a modern, user-friendly web application that provides accurate, verified, and easy-to-understand information about medicines.  
+It helps users search for medications, understand their usage, dosage, side effects, and safety guidelines — all presented in a clean and professional interface.
 
-Currently, two official plugins are available:
+Designed with performance, accessibility, and trust in mind, MedInsight aims to be a reliable digital companion for everyday healthcare awareness.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌟 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔍 Smart medicine search by name or keyword
+- 📚 Detailed medicine profiles (usage, dosage, side effects, warnings)
+- 🛡️ Verified and structured medical information
+- 🧑‍⚕️ Admin dashboard for managing medicine data
+- 📱 Fully responsive design (mobile, tablet & desktop)
+- 🎨 Modern UI with Tailwind CSS & animations
+- ⚡ Fast performance with React
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Routing:** React Router
+- **State Management:** Custom Store (Zustand-style)
+- **Backend:** Node.js / Express (if applicable)
+- **Database:** MongoDB (or your chosen DB)
+
+---
+
+## Live Link
+
+https://medinsight25.netlify.app/
