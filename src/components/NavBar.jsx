@@ -58,11 +58,6 @@ const NavBar = () => {
   // Navigation items
   const navItems = [
     { label: "Home", path: "/", icon: <Home className="w-4 h-4" /> },
-    {
-      label: "Medicine Search",
-      path: "/",
-      icon: <Search className="w-4 h-4" />,
-    },
     { label: "FAQ", path: "/faq", icon: <Shield className="w-4 h-4" /> },
   ];
 
@@ -140,8 +135,8 @@ const NavBar = () => {
                           ? "bg-blue-50 text-blue-700"
                           : "bg-white/20 text-white"
                         : scrolled
-                        ? "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-                        : "text-white/90 hover:text-white hover:bg-white/10"
+                          ? "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                          : "text-white/90 hover:text-white hover:bg-white/10"
                     }`}
                   >
                     {item.icon}
@@ -163,8 +158,8 @@ const NavBar = () => {
                           location.pathname === item.path
                             ? "bg-linear-to-r from-emerald-600 to-emerald-700 text-white"
                             : scrolled
-                            ? "text-gray-700 hover:text-emerald-700 hover:bg-emerald-50"
-                            : "text-white/90 hover:text-white hover:bg-white/10"
+                              ? "text-gray-700 hover:text-emerald-700 hover:bg-emerald-50"
+                              : "text-white/90 hover:text-white hover:bg-white/10"
                         }`}
                       >
                         {item.icon}
@@ -409,9 +404,6 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-
-      {/* Spacer for fixed navbar */}
-      <div className="h-16"></div>
     </>
   );
 };

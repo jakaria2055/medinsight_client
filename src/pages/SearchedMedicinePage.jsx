@@ -139,7 +139,7 @@ const SearchedMedicinePage = () => {
                       </div>
                     </div>
                   </Link>
-                )
+                ),
               )}
             </div>
           </div>
@@ -359,11 +359,6 @@ const SearchedMedicinePage = () => {
                   </li>
                 </ul>
               </div>
-            </div>
-            <div className="shrink-0">
-              <button className="px-5 py-2.5 bg-white border border-blue-300 text-blue-700 font-medium rounded-lg hover:bg-blue-50 transition-colors">
-                Need Help?
-              </button>
             </div>
           </div>
         </div>

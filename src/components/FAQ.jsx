@@ -77,7 +77,7 @@ const FAQ = () => {
     (faq) =>
       faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       faq.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      faq.category.toLowerCase().includes(searchTerm.toLowerCase())
+      faq.category.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   const categories = [...new Set(faqs.map((faq) => faq.category))];
@@ -154,26 +154,6 @@ const FAQ = () => {
                   </button>
                 ))}
               </div>
-            </div>
-
-            {/* Quick Help */}
-            <div className="bg-linear-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-200 p-6">
-              <div className="flex items-start gap-3 mb-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center shrink-0">
-                  <MessageSquare className="w-6 h-6 text-blue-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">
-                    Need More Help?
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Can't find your answer?
-                  </p>
-                </div>
-              </div>
-              <button className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
-                Contact Support
-              </button>
             </div>
           </div>
 
@@ -356,12 +336,16 @@ const FAQ = () => {
                     <MessageSquare className="w-5 h-5 text-purple-600" />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">24/7 Support</p>
-                    <p className="text-sm text-gray-600">We're here to help</p>
+                    <p className="font-semibold text-gray-900">
+                      Expert Guidance
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Certified healthcare
+                    </p>
                   </div>
                 </div>
                 <p className="text-sm text-gray-600">
-                  Contact our support team anytime for assistance
+                  Verified medical information from trusted sources
                 </p>
               </div>
             </div>

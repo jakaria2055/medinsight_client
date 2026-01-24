@@ -35,13 +35,6 @@ export default function Footer() {
       { label: "GDPR Compliance", href: "/gdpr" },
       { label: "HIPAA Compliance", href: "/hipaa" },
     ],
-    Company: [
-      { label: "Careers", href: "/careers" },
-      { label: "Partners", href: "/partners" },
-      { label: "Press", href: "/press" },
-      { label: "Blog", href: "/blog" },
-      { label: "Support", href: "/support" },
-    ],
   };
 
   const socialLinks = [
@@ -243,16 +236,6 @@ export default function Footer() {
               better healthcare worldwide
             </p>
           </div>
-        </div>
-
-        {/* Disclaimer */}
-        <div className="mt-8 pt-6 border-t border-gray-900">
-          <p className="text-xs text-gray-500 text-center max-w-3xl mx-auto">
-            <strong>Disclaimer:</strong> The information provided on this
-            website is for educational purposes only and is not a substitute for
-            professional medical advice. Always consult with a qualified
-            healthcare provider regarding any medical conditions or concerns.
-          </p>
         </div>
       </div>
     </footer>

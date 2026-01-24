@@ -36,13 +36,13 @@ const AdminDashBoard = () => {
     MedicineList?.filter(
       (medicine) =>
         medicine.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        medicine.group?.toLowerCase().includes(searchTerm.toLowerCase())
+        medicine.group?.toLowerCase().includes(searchTerm.toLowerCase()),
     ) || [];
 
   // Delete handler
   const handleDelete = async (medicineId, medicineName) => {
     const confirmed = window.confirm(
-      `Are you sure you want to delete "${medicineName}"? This action cannot be undone.`
+      `Are you sure you want to delete "${medicineName}"? This action cannot be undone.`,
     );
     if (!confirmed) return;
 
@@ -65,7 +65,7 @@ const AdminDashBoard = () => {
       ? (
           MedicineList.reduce(
             (sum, med) => sum + (parseFloat(med.price) || 0),
-            0
+            0,
           ) / MedicineList.length
         ).toFixed(2)
       : 0;
@@ -382,57 +382,6 @@ const AdminDashBoard = () => {
               </span>
             </div>
           )}
-        </div>
-
-        {/* Quick Actions */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="bg-linear-to-br from-blue-50 to-white p-5 rounded-xl border border-blue-200">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <Plus className="w-6 h-6 text-blue-600" />
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">Add Medicine</p>
-                <p className="text-sm text-gray-600">Create new entry</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-linear-to-br from-emerald-50 to-white p-5 rounded-xl border border-emerald-200">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
-                <Edit2 className="w-6 h-6 text-emerald-600" />
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">Quick Edit</p>
-                <p className="text-sm text-gray-600">Update details</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-linear-to-br from-amber-50 to-white p-5 rounded-xl border border-amber-200">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center">
-                <Eye className="w-6 h-6 text-amber-600" />
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">View Details</p>
-                <p className="text-sm text-gray-600">See full info</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-linear-to-br from-red-50 to-white p-5 rounded-xl border border-red-200">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
-                <Trash2 className="w-6 h-6 text-red-600" />
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">Delete Items</p>
-                <p className="text-sm text-gray-600">Remove entries</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </main>

@@ -168,9 +168,9 @@ export default function WarmSupportive() {
         </div>
 
         {/* Main Interactive Cards */}
-        <div className="flex flex-col lg:flex-row items-stretch gap-8">
+        <div className="flex flex-col items-stretch">
           {/* Left Column - Expanded Card View */}
-          <div className="lg:w-2/3">
+          <div className="w-full">
             <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
               {/* Card Header */}
               <div className="bg-linear-to-r from-gray-900 to-gray-800 px-8 py-6">
@@ -271,36 +271,6 @@ export default function WarmSupportive() {
                               </div>
                             </div>
                           </div>
-
-                          {/* Action Steps */}
-                          <div className="bg-linear-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
-                            <h4 className="font-semibold text-gray-900 mb-4">
-                              Your Action Plan
-                            </h4>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                              {[
-                                "Set a Daily Reminder",
-                                "Track Your Progress",
-                                "Share with Friends",
-                              ].map((action, idx) => (
-                                <div
-                                  key={idx}
-                                  className="bg-white rounded-lg p-4 border border-gray-200 hover:border-blue-300 transition-colors"
-                                >
-                                  <div className="flex items-center gap-3">
-                                    <div className="w-8 h-8 bg-blue-100 rounded-md flex items-center justify-center">
-                                      <span className="text-blue-600 font-bold">
-                                        {idx + 1}
-                                      </span>
-                                    </div>
-                                    <span className="text-sm font-medium text-gray-900">
-                                      {action}
-                                    </span>
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
                         </>
                       );
                     })()}
@@ -338,141 +308,10 @@ export default function WarmSupportive() {
               </div>
             </div>
           </div>
-
-          {/* Right Column - Quick Wellness Stats */}
-          <div className="lg:w-1/3 space-y-6">
-            {/* Daily Wellness Tracker */}
-            <div className="bg-linear-to-br from-white to-blue-50 rounded-2xl shadow-lg border border-blue-200 p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-6 flex items-center gap-2">
-                <div className="w-2 h-6 bg-blue-600 rounded-full"></div>
-                Daily Wellness Tracker
-              </h3>
-
-              <div className="space-y-4">
-                {[
-                  {
-                    label: "Water Intake",
-                    value: "2.1L",
-                    target: "2.5L",
-                    color: "bg-blue-500",
-                  },
-                  {
-                    label: "Active Minutes",
-                    value: "45min",
-                    target: "60min",
-                    color: "bg-emerald-500",
-                  },
-                  {
-                    label: "Sleep Quality",
-                    value: "7.2h",
-                    target: "8h",
-                    color: "bg-indigo-500",
-                  },
-                  {
-                    label: "Mindful Minutes",
-                    value: "15min",
-                    target: "20min",
-                    color: "bg-rose-500",
-                  },
-                ].map((item, idx) => (
-                  <div key={idx} className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-gray-700">
-                        {item.label}
-                      </span>
-                      <span className="text-sm text-gray-600">
-                        {item.value} / {item.target}
-                      </span>
-                    </div>
-                    <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                      <div
-                        className={`h-full ${item.color} rounded-full transition-all duration-500`}
-                        style={{
-                          width: `${
-                            (parseFloat(item.value) / parseFloat(item.target)) *
-                            100
-                          }%`,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <button className="w-full mt-6 px-4 py-3 bg-linear-to-r from-blue-600 to-blue-700 text-white font-medium rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 flex items-center justify-center gap-2">
-                Update Progress
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
-
-            {/* Weekly Challenge */}
-            <div className="bg-linear-to-br from-emerald-50 to-white rounded-2xl shadow-lg border border-emerald-200 p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
-                  <Activity className="w-6 h-6 text-emerald-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">
-                    Weekly Challenge
-                  </h4>
-                  <p className="text-sm text-gray-600">7-day mindfulness</p>
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <p className="text-sm text-gray-700">
-                  Complete 10 minutes of meditation or deep breathing every day
-                  this week.
-                </p>
-                <div className="flex items-center justify-between text-sm text-gray-600">
-                  <span>Progress: 4/7 days</span>
-                  <span className="font-medium text-emerald-600">57%</span>
-                </div>
-                <div className="flex gap-1">
-                  {[...Array(7)].map((_, idx) => (
-                    <div
-                      key={idx}
-                      className={`flex-1 h-2 rounded-full ${
-                        idx < 4 ? "bg-emerald-500" : "bg-gray-200"
-                      }`}
-                    ></div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Community Support */}
-            <div className="bg-linear-to-br from-purple-50 to-white rounded-2xl shadow-lg border border-purple-200 p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">
-                Join Our Community
-              </h4>
-              <p className="text-sm text-gray-600 mb-4">
-                Connect with others on their wellness journey and share
-                experiences.
-              </p>
-              <div className="flex -space-x-3 mb-4">
-                {[...Array(5)].map((_, idx) => (
-                  <div
-                    key={idx}
-                    className="w-10 h-10 rounded-full border-2 border-white bg-linear-to-br from-blue-400 to-purple-500"
-                  ></div>
-                ))}
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 flex items-center justify-center">
-                  <span className="text-xs font-bold text-gray-600">+24</span>
-                </div>
-              </div>
-              <button className="w-full px-4 py-2.5 bg-white border-2 border-purple-300 text-purple-700 font-medium rounded-lg hover:bg-purple-50 transition-colors">
-                Explore Groups
-              </button>
-            </div>
-          </div>
         </div>
 
         {/* Wellness Principles */}
         <div className="mt-12">
-          <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">
-            Core Wellness Principles
-          </h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {[
               {

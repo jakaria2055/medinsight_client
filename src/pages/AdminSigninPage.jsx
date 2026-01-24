@@ -310,7 +310,7 @@ const AdminSigninPage = () => {
                         to={"/signup"}
                         className="text-blue-600 hover:text-blue-800 font-semibold underline underline-offset-2 decoration-2 transition-colors group"
                       >
-                        Request Access
+                        Sign Up
                         <span className="inline-block ml-1 group-hover:translate-x-1 transition-transform">
                           →
                         </span>

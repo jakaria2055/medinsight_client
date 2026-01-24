@@ -25,11 +25,10 @@ const Hero = () => {
       icon: <Shield className="w-4 h-4" />,
     },
     {
-      label: "Happy Users",
+      label: "Companies",
       value: "10,000+",
       icon: <Heart className="w-4 h-4" />,
     },
-    { label: "Categories", value: "50+", icon: <Pill className="w-4 h-4" /> },
     {
       label: "Accuracy Rate",
       value: "99.8%",
@@ -38,7 +37,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-gray-50 via-white to-blue-50/30 pt-24 pb-32 px-4">
+    <section className="relative overflow-hidden bg-linear-to-br from-gray-50 via-white to-blue-50/30 pt-10 pb-20 px-4">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl"></div>
@@ -54,7 +53,7 @@ const Hero = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full mb-6">
               <Sparkles className="w-4 h-4" />
               <span className="text-sm font-medium">
-                Trusted Medical Resource
+                Trusted Medicine Resource
               </span>
             </div>
 
@@ -66,8 +65,9 @@ const Hero = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-600 mt-6 max-w-lg">
-              Find comprehensive information about medications—from pricing to
-              side effects—all verified by medical professionals.
+              Access accurate, up-to-date medicine details including uses,
+              dosage, side effects and safety information — all reviewed by
+              medical professionals.
             </p>
 
             {/* Search Section */}
@@ -135,20 +135,20 @@ const Hero = () => {
                       >
                         {tag}
                       </button>
-                    )
+                    ),
                   )}
                 </div>
               </div>
             </div>
 
             {/* Stats Grid */}
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="mt-12 w-3xl grid grid-cols-2 md:grid-cols-4 gap-4">
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-gray-200 shadow-sm"
+                  className="bg-white/80 backdrop-blur-sm rounded-xl p-3 border border-gray-200 shadow-sm"
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2">
                     <div className="w-10 h-10 rounded-lg bg-linear-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
                       <div className="text-blue-600">{stat.icon}</div>
                     </div>
@@ -235,9 +235,9 @@ const Hero = () => {
                     <Users className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900">24/7 Support</p>
+                    <p className="font-bold text-gray-900">Expert Guidance</p>
                     <p className="text-sm text-gray-600">
-                      Medical experts available
+                      Certified healthcare professionals
                     </p>
                   </div>
                 </div>
@@ -273,25 +273,6 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Trusted By Section */}
-        <div className="mt-20 pt-12 border-t border-gray-200">
-          <p className="text-center text-gray-500 text-sm mb-8">
-            Trusted by leading healthcare institutions
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 opacity-70">
-            {[...Array(6)].map((_, i) => (
-              <div
-                key={i}
-                className="h-12 bg-linear-to-r from-gray-100 to-gray-200 rounded-lg flex items-center justify-center"
-              >
-                <span className="text-gray-400 font-semibold">
-                  Hospital {i + 1}
-                </span>
-              </div>
-            ))}
           </div>
         </div>
       </div>
